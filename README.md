@@ -9,7 +9,8 @@ start Application - reload maven dependencies
                   
  Test the application - shared some sample curls below. can be run from terminal or importing in postman.
  
-Curl 1- Post -  request from external source
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+curl 1 - post - request from internal service
 =====================================   
 curl --location --request POST 'http://localhost:3030/printHeaders' \
 --header 'Content-Type: application/json' \
@@ -30,9 +31,9 @@ curl --location --request POST 'http://localhost:3030/printHeaders' \
     },
     "user_mode": "admin"
 }'
-=====================
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 curl 2 - post - request from internal service
-================================
+=======================================================
 curl --location --request POST 'http://localhost:3030/printHeaders' \
 --header 'access-token: WXFubXJkYjljZH\' \
 --header 'Content-Type: application/json' \
@@ -52,26 +53,26 @@ curl --location --request POST 'http://localhost:3030/printHeaders' \
     },
     "user_mode": "admin"
 }'
-========================================
+=======================================================
 curl 3- GET - request from external source
-==========================================
+=======================================================
 curl --location --request GET 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
 --header 'User-Agent: Chrome' \
 --header 'Referer: http.oyo.com' \
 --data-raw ''
-========================================
+=====================================================
 curl 4 - GET - request from nonexternal
-======================================
+=====================================================
 curl --location --request GET 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
 --header 'User-Agent: Chrome' \
 --data-raw ''
-=================================
+=====================================================
 curl 5 - PUT - request from external
-=================================
+=====================================================
 curl --location --request PUT 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
@@ -81,9 +82,9 @@ curl --location --request PUT 'http://localhost:3030/printHeaders/1' \
     "payment_page": true,
     "user_mode": "Consumer_Guest"
 }'
-=================================
+=====================================================
 curl 6 - Put request from  non external
-=================================
+=====================================================
 curl --location --request PUT 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
@@ -92,9 +93,9 @@ curl --location --request PUT 'http://localhost:3030/printHeaders/1' \
     "payment_page": true,
     "user_mode": "Consumer_Guest"
 }'
-===================================
+======================================================
 curl 7 - patch request from external
-=======================================
+======================================================
 curl --location --request PATCH 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
@@ -115,9 +116,9 @@ curl --location --request PATCH 'http://localhost:3030/printHeaders/1' \
 }'
 ====================================================
 curl 8 -patch request from external
-====================================================
+=====================================================
 curl --location --request PATCH 'http://localhost:3030/printHeaders/1' \
---header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
+--header 'access-token: WXFubXJkYjl6dEFzd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
 --header 'Referer: http.facebook.com' \
 --data-raw '{
