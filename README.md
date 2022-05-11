@@ -9,9 +9,9 @@ start Application - reload maven dependencies
                   
  Test the application - shared some sample curls below. can be run from terminal or importing in postman.
  
-  Curl 1- Post -  request from external source
-   ========================   
-          curl --location --request POST 'http://localhost:3030/printHeaders' \
+Curl 1- Post -  request from external source
+=====================================   
+curl --location --request POST 'http://localhost:3030/printHeaders' \
 --header 'Content-Type: application/json' \
 --header 'User-Agent: Chrome' \
 --header 'Referer: http.oyo.com' \
@@ -30,11 +30,9 @@ start Application - reload maven dependencies
     },
     "user_mode": "admin"
 }'
-
 =====================
 curl 2 - post - request from internal service
 ================================
-
 curl --location --request POST 'http://localhost:3030/printHeaders' \
 --header 'access-token: WXFubXJkYjljZH\' \
 --header 'Content-Type: application/json' \
@@ -57,24 +55,20 @@ curl --location --request POST 'http://localhost:3030/printHeaders' \
 ========================================
 curl 3- GET - request from external source
 ==========================================
-
 curl --location --request GET 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
 --header 'User-Agent: Chrome' \
 --header 'Referer: http.oyo.com' \
 --data-raw ''
-
 ========================================
 curl 4 - GET - request from nonexternal
 ======================================
-
 curl --location --request GET 'http://localhost:3030/printHeaders/1' \
 --header 'access-token: WXFubXJkYjljZHcyV3pCb04xZHk6dEFzNFBmd3g1dHJVZFZ6VFEtLXo=' \
 --header 'Content-Type: application/json' \
 --header 'User-Agent: Chrome' \
 --data-raw ''
-
 =================================
 curl 5 - PUT - request from external
 =================================
