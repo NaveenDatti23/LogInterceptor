@@ -7,7 +7,7 @@ start Application - reload maven dependencies
                   - build the application
                   - run the application
                   
- Test the application - shared some sample curls below. can be run from terminal or importing in postman.
+ Test the application - shared some sample curls below.please retrieve the curls from editor mode as preview mode adds tab spaces in curls. can be run from terminal or importing in postman.
  
 ///////////////////////////////////////////////////////////////////////////////////////////////////// \
 curl 1 - post - request from internal service \
